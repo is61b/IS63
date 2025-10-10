@@ -25,6 +25,8 @@
         // 3. variable bersifat case sensitive
 
         // OPERATOR ARITMATIKA (+ - * / ** %)
+
+        // STRUKTUR LOGIKA (if,elseif,else)dan PERULANGAN (LOOPING)
     ?>
 </body>
 </html>
