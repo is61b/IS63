@@ -20,4 +20,12 @@ do{
     $dw++;
 }while($dw <= 10);
 
+echo "<hr>";
+
+### FOREACH ####
+$is63 = array("Abil","Kiki Gemoy","Mahfud");
+
+foreach($is63 as $data){
+    echo "$data <br>";
+}
 ?>
