@@ -19,7 +19,7 @@
             <div class="col-8 m-auto">
                 <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div class="card-header">
-                        Form Biodata Siswa
+                        <b>FORM BIODATA SISWA</b>
                     </div>
                     <div class="card-body">
                         <form action="proses_tambah.php" method="POST" enctype="multipart/form-data">
