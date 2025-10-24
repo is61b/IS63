@@ -15,70 +15,70 @@
     ?>
 
     <div class="container">
-        <div class="row mt-5">
+        <div class="row my-5">
             <div class="col-8 m-auto">
-                <div class="card">
+                <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div class="card-header">
                         Form Biodata Siswa
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="proses_tambah.php" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                <input name="nama" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">NISN</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                <input name="nisn" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Tempat Lahir</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                <input name="tp_lahir" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
-                                <input type="date" class="form-control" id="exampleInputEmail1"
+                                <input name="tg_lahir" type="date" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Alamat</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                <input name="alamat" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <input name="email" type="email" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
                                 <br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio1" value="option1">
+                                    <input class="form-check-input" type="radio" name="jk"
+                                        id="inlineRadio1" value="Laki-laki">
                                     <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio2" value="option2">
+                                    <input class="form-check-input" type="radio" name="jk"
+                                        id="inlineRadio2" value="Perempuan">
                                     <label class="form-check-label" for="inlineRadio2">Perempuan</label>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Jurusan</label>
-                                <select class="form-control" name="" id="">
+                                <select class="form-control" name="jur" id="">
                                     <option value="">-Pilih Jurusan-</option>
-                                    <option value="">IPA</option>
-                                    <option value="">IPS</option>
-                                    <option value="">Bahasa</option>
+                                    <option value="IPA">IPA</option>
+                                    <option value="IPS">IPS</option>
+                                    <option value="Bahasa">Bahasa</option>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Foto</label>
-                                <input type="file" class="form-control" id="exampleInputEmail1"
+                                <input name="foto" type="file" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
