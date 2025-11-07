@@ -44,14 +44,20 @@
                                 $tampil = mysqli_query($koneksi,$qry);
 
                                 #4. looping hasil query
+                                $nomor = 1;
                                 foreach($tampil as $data){
 
                                 ?>
                                 <tr>
-                                    <th scope="row">1</th>
+                                    <th scope="row"><?=$nomor++?></th>
                                     <td><?=$data['nama']?></td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <td><?=$data['nisn']?></td>
+                                    <td><?=$data['tg_lahir']?></td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm">detail</button>
+                                        <button class="btn btn-info btn-sm">edit</button>
+                                        <button class="btn btn-danger btn-sm">hapus</button>
+                                    </td>
                                 </tr>
                                 <?php
                                 }
