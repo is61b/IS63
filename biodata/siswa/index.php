@@ -22,6 +22,7 @@
                 <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div class="card-header">
                         <b>BIODATA SISWA</b>
+                        <a href="form_tambah.php" class="float-end btn btn-primary btn-sm"><i class="fa-solid fa-user-plus"></i> Tambah data</a>
                     </div>
                     <div class="card-body">
                         <table class="table">
@@ -56,9 +57,9 @@
                                     <td><?=$data['nisn']?></td>
                                     <td><?=$data['tg_lahir']?></td>
                                     <td>
-                                        <button class="btn btn-warning btn-sm">detail</button>
-                                        <button class="btn btn-info btn-sm">edit</button>
-                                        <button class="btn btn-danger btn-sm">hapus</button>
+                                        <button class="btn btn-warning btn-sm"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        <button class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
                                     </td>
                                 </tr>
                                 <?php
