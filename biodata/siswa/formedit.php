@@ -32,44 +32,44 @@ $data = mysqli_fetch_array($edit);
                         <form action="proses_tambah.php" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                                <input name="nama" type="text" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['nama']?>" name="nama" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">NISN</label>
-                                <input name="nisn" type="text" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['nisn']?>" name="nisn" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Tempat Lahir</label>
-                                <input name="tp_lahir" type="text" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['tp_lahir']?>" name="tp_lahir" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
-                                <input name="tg_lahir" type="date" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['tg_lahir']?>" name="tg_lahir" type="date" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Alamat</label>
-                                <input name="alamat" type="text" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['alamat']?>" name="alamat" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['email']?>" name="email" type="email" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
                                 <br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="jk"
+                                    <input class="form-check-input" type="radio" name="jk" <?php echo $data['jk']=='Laki-laki' ? 'checked' : '' ?>
                                         id="inlineRadio1" value="Laki-laki">
                                     <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="jk"
+                                    <input class="form-check-input" type="radio" name="jk" <?php echo $data['jk']=='Perempuan' ? 'checked' : '' ?>
                                         id="inlineRadio2" value="Perempuan">
                                     <label class="form-check-label" for="inlineRadio2">Perempuan</label>
                                 </div>
@@ -78,9 +78,9 @@ $data = mysqli_fetch_array($edit);
                                 <label for="exampleInputEmail1" class="form-label">Jurusan</label>
                                 <select class="form-control" name="jur" id="">
                                     <option value="">-Pilih Jurusan-</option>
-                                    <option value="IPA">IPA</option>
-                                    <option value="IPS">IPS</option>
-                                    <option value="Bahasa">Bahasa</option>
+                                    <option <?php echo $data['jur']=='IPA' ? 'selected' : '' ?> value="IPA">IPA</option>
+                                    <option <?php echo $data['jur']=='IPS' ? 'selected' : '' ?> value="IPS">IPS</option>
+                                    <option <?php echo $data['jur']=='Bahasa' ? 'selected' : '' ?> value="Bahasa">Bahasa</option>
                                 </select>
                             </div>
                             <div class="mb-3">
