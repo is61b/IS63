@@ -73,19 +73,39 @@
                                                 <table class="table">
                                                 <tbody>
                                                     <tr>
-                                                        <td>nama</td>
+                                                        <td>Nama</td>
                                                         <th scope="row"><?=$data['nama']?></th>
                                                     </tr>
                                                     <tr>
                                                         <td>NISN</td>
                                                         <th scope="row"><?=$data['nisn']?></th>
                                                     </tr>
+                                                    <tr>
+                                                        <td>Tempat Lahir</td>
+                                                        <th scope="row"><?=$data['tp_lahir']?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tanggal Lahir</td>
+                                                        <th scope="row"><?=$data['tg_lahir']?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Alamat</td>
+                                                        <th scope="row"><?=$data['alamat']?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Email</td>
+                                                        <th scope="row"><?=$data['email']?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jenis Kelamin</td>
+                                                        <th scope="row"><?=$data['jk']?></th>
+                                                    </tr>
                                                 </tbody>
                                                 </table>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                
                                             </div>
                                             </div>
                                         </div>
