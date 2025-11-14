@@ -59,7 +59,7 @@
                                     <td>
                                         <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$data['id']?>"><i class="fa-solid fa-magnifying-glass"></i></button>
                                         <button class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
-                                        <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?=$data['id']?>"><i class="fa-solid fa-trash"></i></button>
 
                                         <!-- Modal Detail-->
                                         <div class="modal fade" id="exampleModal<?=$data['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -106,6 +106,25 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                 
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <!-- Modal Hapus-->
+                                        <div class="modal fade" id="modalhapus<?=$data['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Peringatan</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Yakin Data Dengan Nama <?=$data['nama']?> Ingin Dihapus?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <a href="proseshapus.php" class="btn btn-danger">Hapus</a>
                                             </div>
                                             </div>
                                         </div>
