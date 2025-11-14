@@ -15,7 +15,8 @@
 
     #3. Query Insert (proses tambah data)
     $query = "UPDATE biodata SET nama='$nama', nisn='$nisn', tp_lahir='$tp_lahir', 
-    tg_lahir='$tg_lahir', alamat='$alamat', email='$email', jur='$jur' WHERE id='$id'";
+    tg_lahir='$tg_lahir', alamat='$alamat', email='$email', jk='$jk',  jur='$jur' 
+    WHERE id='$id'";
 
     $tambah = mysqli_query($koneksi,$query);
 
