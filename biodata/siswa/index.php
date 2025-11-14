@@ -57,20 +57,31 @@
                                     <td><?=$data['nisn']?></td>
                                     <td><?=$data['tg_lahir']?></td>
                                     <td>
-                                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$data['id']?>"><i class="fa-solid fa-magnifying-glass"></i></button>
                                         <button class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
                                         <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
 
                                         <!-- Modal Detail-->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="exampleModal<?=$data['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Data Detail <?=$data['nama']?></h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                ...
+                                                <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>nama</td>
+                                                        <th scope="row"><?=$data['nama']?></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>NISN</td>
+                                                        <th scope="row"><?=$data['nisn']?></th>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
