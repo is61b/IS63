@@ -124,7 +124,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <a href="proseshapus.php" class="btn btn-danger">Hapus</a>
+                                                <a href="proseshapus.php?id=<?=$data['id']?>" class="btn btn-danger">Hapus</a>
                                             </div>
                                             </div>
                                         </div>
