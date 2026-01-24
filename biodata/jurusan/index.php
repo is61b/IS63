@@ -55,7 +55,7 @@
                                     <td><?=$data['kode']?></td>
                                     <td><?=$data['nama_jurusan']?></td>
                                     <td>
-                                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$data['id']?>"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        
                                         <a href="formedit.php?id=<?=$data['id']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
                                         <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?=$data['id']?>"><i class="fa-solid fa-trash"></i></button>
 
@@ -68,7 +68,7 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                Yakin Data Dengan Nama <?=$data['nama']?> Ingin Dihapus?
+                                                Yakin Data Jurusan <?=$data['nama_jurusan']?> Ingin Dihapus?
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
