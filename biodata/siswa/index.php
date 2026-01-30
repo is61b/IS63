@@ -42,7 +42,7 @@
                                 include("../koneksi.php");
 
                                 #2. menulikan query menampilkan data
-                                $qry = "SELECT * FROM biodata INNER JOIN jurusan ON biodata.jurusans_id = jurusan.id";
+                                $qry = "SELECT *, biodata.id AS ids FROM biodata INNER JOIN jurusan ON biodata.jurusans_id = jurusan.id";
 
                                 #3. menjalankan query
                                 $tampil = mysqli_query($koneksi,$qry);
@@ -59,12 +59,12 @@
                                     <td><?=$data['nama_jurusan']?></td>
                                     <td><?=$data['tg_lahir']?></td>
                                     <td>
-                                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$data['id']?>"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                        <a href="formedit.php?id=<?=$data['id']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?=$data['id']?>"><i class="fa-solid fa-trash"></i></button>
+                                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$data['ids']?>"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        <a href="formedit.php?id=<?=$data['ids']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalhapus<?=$data['ids']?>"><i class="fa-solid fa-trash"></i></button>
 
                                         <!-- Modal Detail-->
-                                        <div class="modal fade" id="exampleModal<?=$data['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="exampleModal<?=$data['ids']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                             <div class="modal-header">
@@ -118,7 +118,7 @@
                                         </div>
 
                                         <!-- Modal Hapus-->
-                                        <div class="modal fade" id="modalhapus<?=$data['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="modalhapus<?=$data['ids']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                             <div class="modal-header">
@@ -130,7 +130,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <a href="proseshapus.php?id=<?=$data['id']?>" class="btn btn-danger">Hapus</a>
+                                                <a href="proseshapus.php?id=<?=$data['ids']?>" class="btn btn-danger">Hapus</a>
                                             </div>
                                             </div>
                                         </div>
