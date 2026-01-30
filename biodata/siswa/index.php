@@ -31,6 +31,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">NISN</th>
+                                    <th scope="col">Jurusan</th>
                                     <th scope="col">Tanggal Lahir</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -41,7 +42,7 @@
                                 include("../koneksi.php");
 
                                 #2. menulikan query menampilkan data
-                                $qry = "SELECT * FROM biodata";
+                                $qry = "SELECT * FROM biodata INNER JOIN jurusan ON biodata.jurusans_id = jurusan.id";
 
                                 #3. menjalankan query
                                 $tampil = mysqli_query($koneksi,$qry);
@@ -55,6 +56,7 @@
                                     <th scope="row"><?=$nomor++?></th>
                                     <td><?=$data['nama']?></td>
                                     <td><?=$data['nisn']?></td>
+                                    <td><?=$data['nama_jurusan']?></td>
                                     <td><?=$data['tg_lahir']?></td>
                                     <td>
                                         <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$data['id']?>"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -103,6 +105,7 @@
                                                         <td>Jenis Kelamin</td>
                                                         <th scope="row"><?=$data['jk']?></th>
                                                     </tr>
+                                                    
                                                 </tbody>
                                                 </table>
                                             </div>
